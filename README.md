@@ -15,12 +15,17 @@ Read the source code of the classes in the project. The project provides two cla
  
  Start with implementing the methods in `LinkedList`. Each method that you
  have to implement currently contains a single line of code that throws an 
- error -- remove this line when you start your work. 
+ error -- **remove this line when you start your work**. 
  
  The code comes with *unit tests* in the `tests` package, which you can run to check your work. The
- way that you run these depends on the IDE that you're using (it is usually as
- simple as right-clicking on the test and selecting the option to run it) -- ask
- me for help with that in the labs.
+ way that you run these depends on the IDE that you're using. The first thing you need to do
+  is to add the JUnit library to the project. After that it is usually as
+ simple as right-clicking on the test and selecting the option to run it -- ask
+ for help with this in the labs or google the procedure for your IDE. (For example, in Intellij 
+ you need to click on *File / Project Structure* then *Libraries*. Then click on the 
+ `+` button and select *From Maven*. Type "junit" into the search box and select one of 
+ the results. Now you have added the JUnit library to the project you can right-click 
+ on a test class and select *Run*.)
  
  1. First, implement the `isEmpty` method. It returns `true` if `_head` is `null`,
  `false` otherwise.
