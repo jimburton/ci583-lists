@@ -24,8 +24,8 @@ for sets, such as `head` and `tail`. So your first job is make a common *supercl
     ```
     protected Node _head;
     ```
-    Next, move the methods `isEmpty`, `length`, `member`, `printList` and `toString` from `LinkedList` 
-and put them in `LinkedCollection`. 
+    from `LinkedList` into the `LinkedCollection` class. Next, move the methods `isEmpty`, `length`, `member`, `printList` and `toString` from `LinkedList` 
+into `LinkedCollection`. 
 
     Use the `extends` keyword to make `LinkedList` 
 a subclass of `LinkedCollection`. Run the `LinkedListTest` test suite to make sure 
@@ -40,16 +40,22 @@ use `extends`). Add the following `equals` method to the new class:
         if (o == this) {
             return true;
         }
+   
         /* Check if o is an instance of Set or not
           "null instanceof [type]" also returns false */
         if (!(o instanceof Set)) {
             return false;
         }
+   
         // typecast o to Set so that we can compare it to this
         Set s2 = (Set) o;
+   
+        //check that the two sets are the same length
         if(this.length() != s2.length()) {
             return false;
         }
+   
+        //loop through the current set and check that every element is an element of the other set
         Node n = _head;
         while(n != null) {
             if(!s2.member(n.data)) {
@@ -61,15 +67,15 @@ use `extends`). Add the following `equals` method to the new class:
     }
     ```
    
-   Note that the `equals` method says two sets are equal if they contain the same elements
+   Note that this `equals` method says two sets are equal if they contain the same elements
    (the order of the elements doesn't matter).
 
 3. Implement the `insert` method in `Set`. This should insert a new element to the set
-while ensuring that there are no duplicates.
+while ensuring that there are no duplicates. What is the complexity of `insert`?
 
 4.  The *union* of two sets, *s1* and *s2*, is a set that has all the elements of *s1* and
 all the elements of *s2* (and, obviously, no duplicates). If `s1={1,3,5}` and `s2={2,3,4,5}`
-then `s1.union(s2)={1,2,3,4,5}`. Implement a union method in 
+then `s1.union(s2)=={1,2,3,4,5}`. Implement a union method in 
 `Set` with this signature:
 
     ```
@@ -85,7 +91,7 @@ then `s1.union(s2)={1,2,3,4,5}`. Implement a union method in
     
 5. The *intersection* of two sets, *s1* and *s2*, is a set that has all the elements that
 are elements of both *s1* and *s2*. If `s1={1,3,5}` and `s2={2,3,4,5}` then 
-`s1.intersection(s2)={3,5}`. Implement an intersection method in `Set` with this 
+`s1.intersection(s2)=={3,5}`. Implement an intersection method in `Set` with this 
 signature:
 
     ```
@@ -98,7 +104,7 @@ signature:
 
 6. The *difference* of a set, *s1*, with respect to a second set, *s2*, is the set that 
 has all the elements that are in *s1* but not in *s2*. If `s1={1,3,5}` and `s2={2,3,4,5}` 
-then `s1.difference(s2)={1}`. Implement an difference method in `Set` with this 
+then `s1.difference(s2)=={1}` and `s2.difference(s1)=={2,4}`. Implement an difference method in `Set` with this 
    signature:
    
     ```
