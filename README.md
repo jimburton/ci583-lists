@@ -55,9 +55,9 @@ of the list:
     ```java
     Node last = _head;
     int c = 0;
-    while (last.next != null) { //loop to the end of the list
-        last = last.next;
-        c++
+    while (last != null) { //loop to the end of the list
+        c++;
+        last = last.next; //move onto the next node in the list
     }
     return c; 
     ``` 
