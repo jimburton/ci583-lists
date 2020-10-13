@@ -10,15 +10,4 @@ public class SortedList extends LinkedList {
         throw new UnsupportedOperationException("Method not implemented");
     }
 
-    public SortedList tail() {
-        if(_head == null){
-            throw new NullPointerException("Empty collection");
-        } else if (_head.next == null) {
-            return null;
-        } else {
-            SortedList l = new SortedList();
-            l._head = _head.next;
-            return l;
-        }
-    }
 }
