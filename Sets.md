@@ -104,7 +104,7 @@ signature:
 
 6. The *difference* of a set, *s1*, with respect to a second set, *s2*, is the set that 
 has all the elements that are in *s1* but not in *s2*. If `s1={1,3,5}` and `s2={2,3,4,5}` 
-then `s1.difference(s2)=={1}` and `s2.difference(s1)=={2,4}`. Implement an difference method in `Set` with this 
+then `s1.difference(s2)=={1}` and `s2.difference(s1)=={2,4}`. Implement a difference method in `Set` with this 
    signature:
    
     ```
