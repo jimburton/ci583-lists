@@ -66,9 +66,19 @@ of the list:
 
 5. Next, implement the `cons` method. Start by making a new `Node` object. If
 the `_head` node is null (e.g. the list is new), then just set it to be your new
-node. Otherwise, you need to loop to the end of the list, as in the previous 
-loop but without the counter, then set the `next` field of the last item to
+node. Otherwise, you need to loop to the end of the list in a similar way to the previous 
+loop. However, this time you don't want the counter and you don't want to go too far
+and set `last` to `null`. So you can change the loop as follows, then set the `next` field of the last item to
 point to your new node.
+
+    ```java
+    Node last = _head;
+    while (last.next != null) { //loop to the end of the list
+        c++;
+        last = last.next; //move onto the next node in the list
+    }
+    // now last is not null but last.next *is* null
+    ``` 
 
 6. For the `member` method, loop through the list and return `true` if you find
 a node with the data that you are looking for (i.e. the value supplied to the
