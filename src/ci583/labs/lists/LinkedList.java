@@ -31,7 +31,9 @@ public class LinkedList extends LinkedCollection {
             _head = new Node(data);
         } else {
             Node last = _head;
-            while (last.next != null) last = last.next;
+            while (last.next != null) {
+                last = last.next;
+            }
             last.next = n;
         }
     }
