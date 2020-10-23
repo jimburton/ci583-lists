@@ -11,7 +11,7 @@ public class Nil extends LinkedList {
 	public LinkedList tail() {
 		throw new UnsupportedOperationException("Method not implemented");
 	}
-	
+
 	@Override
 	public boolean isEmpty() {
 		throw new UnsupportedOperationException("Method not implemented");
