@@ -46,6 +46,6 @@ public class Nil extends LinkedList {
 
 	@Override
 	public String toString() {
-		return "";
+		return "Nil";
 	}
 }
