@@ -18,21 +18,7 @@ public class ListItem extends LinkedList {
 	public LinkedList tail() {
 		return tail;
 	}
-	
-	@Override
-	public boolean equals(Object o) {
-		if(!(o instanceof ListItem)) return false;
-		ListItem that = (ListItem) o;
-		return head == that.head && tail.equals(that.tail);
-	}
-	
-	@Override
-	public String toString() {
-		return head + " :: " + tail.toString();
-	}
-	/*
-	 * The methods you need to implement start here
-	 */
+
 	@Override
 	public boolean isEmpty() {
 		return false;
@@ -56,5 +42,17 @@ public class ListItem extends LinkedList {
 	@Override
 	public LinkedList delete(int e) {
 		return (e==head) ? tail : new ListItem(head, tail.delete(e));
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if(!(o instanceof ListItem)) return false;
+		ListItem that = (ListItem) o;
+		return head == that.head && tail.equals(that.tail);
+	}
+
+	@Override
+	public String toString() {
+		return head + " :: " + tail.toString();
 	}
 }

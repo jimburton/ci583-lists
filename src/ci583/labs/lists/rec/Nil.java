@@ -11,18 +11,7 @@ public class Nil extends LinkedList {
 	public LinkedList tail() {
 		throw new RuntimeException("Called tail on an empty list.");
 	}
-	@Override
-	public boolean equals(Object o) {
-		return (o instanceof Nil);
-	}
-	
-	@Override
-	public String toString() {
-		return "Nil";
-	}
-	/*
-	 * The methods you need to implement start here.
-	 */
+
 	@Override
 	public boolean isEmpty() {
 		return true;
@@ -50,4 +39,13 @@ public class Nil extends LinkedList {
 	@Override
 	protected int indexOfInner(int e, int count) { return -1; }
 
+	@Override
+	public boolean equals(Object o) {
+		return (o instanceof Nil);
+	}
+
+	@Override
+	public String toString() {
+		return "Nil";
+	}
 }
