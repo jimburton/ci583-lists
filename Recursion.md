@@ -7,6 +7,11 @@ work out how long it was, and so on. Finding the end of
 the list meant detecting the situation where the pointer to the next item was `null`.
 This version will use *recursion* and *inheritance*.
 
+The file you are reading and the skeleton code to work on are in the branch of this repository
+called `recursive`and my solutions are in the branch called `recursive-solution`. If, rather
+than using `git` to switch branches, you download a zip file to work on make sure you use the
+drop-down box on the github website to switch to the right branch before downloading.
+
 In the package `ci583.labs.lists.rec` are three classes. `LinkedList` is the superclass
 of the objects that will make up your (recursive) linked lists. Those objects will be
 instances of one of the subclasses of `LinkedList`, which are `ListItem` and `Nil`. An
