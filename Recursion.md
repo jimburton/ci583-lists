@@ -31,8 +31,7 @@ Hopefully you will see that there is much less code and that the recursive solut
 is more *declarative*, in that it focuses more on saying "what to do" than 
 on "how to do it". 
 
-There are JUnit tests in the class `ci583.labs.test.LinkedListRecTest` and my solutions
-in the branch of this repository called `recursive-solution`. 
+There are JUnit tests in the class `ci583.labs.test.LinkedListRecTest`. 
 
 1. Implement the `cons` method. This works in the same way whether it is called on `Nil`
 or a `ListItem`, so the code should go in the superclass, `LinkedList`. Every list
