@@ -43,13 +43,9 @@ public class LinkedList {
 
     public void cons (int data) {
         Node n = new Node(data);
-        if (_head == null) {
-            _head = new Node(data);
-        } else {
-            Node last = _head;
-            while (last.next != null) last = last.next;
-            last.next = n;
-        }
+        Node oldHead = _head;
+        _head = n;
+        _head.next = oldHead;
     }
 
     public boolean member(int data) {
