@@ -62,13 +62,11 @@ of the list:
     return c; 
     ``` 
 
-    You can solve most of the following methods with a similar style of loop.
+    You can solve many of the following methods with a similar style of loop.
 
-5. Next, implement the `cons` method. Start by making a new `Node` object. If
-the `_head` node is null (e.g. the list is new), then just set it to be your new
-node. Otherwise, you need to loop to the end of the list, as in the previous 
-loop but without the counter, then set the `next` field of the last item to
-point to your new node.
+5. Next, implement the `cons` method. Make a local variable containing a reference to
+   current head. Then make a new `Node` object, set it as `_head` and set the `next` 
+   reference to point to the old head.
 
 6. For the `member` method, loop through the list and return `true` if you find
 a node with the data that you are looking for (i.e. the value supplied to the
