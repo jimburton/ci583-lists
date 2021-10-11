@@ -80,7 +80,7 @@ public class LinkedListTest {
 		}
 
 		list.delete(5);
-		assertFalse(list.member(5));
+		assertFalse(list.member(4));
 		assertEquals(list.length(), 9);
 	}
 }
