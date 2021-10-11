@@ -64,7 +64,8 @@ public class LinkedListTest {
 			list.cons(i);
 		}
 		System.out.println(list);
-		assertEquals(list.indexOf(5), 4);
+		assertEquals(list.indexOf(0), 0);
+		assertEquals(list.indexOf(5), 5);
 		assertEquals(list.indexOf(99), -1);
 	}
 
