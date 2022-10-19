@@ -32,7 +32,7 @@ public class SortedListTest {
 		int prev = list.head();
 		while(list != null) {
 			assert(prev <= list.head());
-			list = list.tail();
+			list = (SortedList) list.tail();
 		}
 	}
 
