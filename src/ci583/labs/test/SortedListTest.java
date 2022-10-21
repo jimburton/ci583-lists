@@ -28,11 +28,11 @@ public class SortedListTest {
 		for(int i=0;i<10;i++) {
 			list.insert(gen.nextInt());
 		}
-		System.out.println(list);
-		int prev = list.head();
-		while(list != null) {
-			assert(prev <= list.head());
-			list = (SortedList) list.tail();
+		LinkedList l = (LinkedList) list;
+		int prev = l.head();
+		while(l != null) {
+			assert(prev <= l.head());
+			l = l.tail();
 		}
 	}
 
